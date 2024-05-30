@@ -12,7 +12,7 @@ const Button: React.FC<ButtonProps> = ({ text, type }) => {
   const applyStyles =
     "bg-orange-600 text-white btn-shadow";
 const discoverStyles =
-    "border-2 border-white text-white hover:bg-white hover:text-black shadow-[0 0 24px rgba(99,224,120,0.6)]";
+    "border-2  btn-shadow border-white text-white hover:bg-white hover:text-black";
 
   const styles = type === 'apply' ? applyStyles : discoverStyles;
 
