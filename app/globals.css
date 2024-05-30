@@ -14,3 +14,12 @@
   }
 }
 
+*{
+  font-family: 'Manrope';
+}
+.btn-shadow:hover{
+  box-shadow: 0 0 24px rgba(99,224,120,0.6);
+}
+section{
+  padding-bottom: 68px !important;
+}
