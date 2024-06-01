@@ -16,7 +16,7 @@ type Data = {
 const data: Data = {
   Idea: {
     text: "The idea originated from a group of venture capitalists aiming to consolidate your daily needs into a comprehensive crypto-based platform.",
-    image: "/images/idea.svg", // Optional image path
+    image: "/images/idea.png", // Optional image path
   },
   Finance: {
     text: "Your finance content here...",

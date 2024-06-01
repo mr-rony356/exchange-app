@@ -4,7 +4,7 @@ import Button from "../Button";
 const SubscriptionSection: React.FC = () => {
   return (
     <div className="text-orange-800 bg-black">
-        <div className="subs-grad-section  pt-16 md:pt-32  pb-36 px-4 ">
+        <div className="subs-grad-section  pt-16 md:pt-32  pb-36 px-2 md:px-4">
           <div className="flex justify-center flex-col items-center mb-4 md:mb-2">
             <div className="text-white text-3xl md:text-7xl text-center w-full ">
               <span className="text-gray-500">B</span>
@@ -26,7 +26,7 @@ const SubscriptionSection: React.FC = () => {
               <span className="text-gray-700">H</span>
               <span className="text-gray-700">E</span>
             </div>
-            <h1 className="text-gray-100 text-3xl md:text-7xl mb-4">
+            <h1 className="text-gray-100 text-2xl md:text-7xl mb-4">
               ACONOMY COMMUNITY
             </h1>
           </div>
