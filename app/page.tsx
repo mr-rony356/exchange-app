@@ -90,7 +90,7 @@ export default function Home() {
             <div className="w-full md:w-2/5">
               <p className="text-orange-500 uppercase">native cryptocurrency</p>
               <h1 className="my-8 text-3xl md:text-5xl">
-                AEC: The platform's driving force.
+                AEC: The platform&apos;s driving force.
               </h1>
               <div>
                 <PerformanceCard

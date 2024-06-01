@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
               Explore Value. Explore Aconomy.
             </h2>
             <p className="mt-4 text-gray-300">
-              Aconomy's mission is to make cryptocurrency accessible to
+              Aconomy &apos; s mission is to make cryptocurrency accessible to
               everyone, helping you manage your digital asset wealth and achieve
               a life of independence, value, and growth. Apply today to begin
               your journey.
