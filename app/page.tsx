@@ -102,7 +102,7 @@ export default function Home() {
               <Image
                 src={Performance}
                 alt="image"
-                className="lg:absolute top-24"
+                className="xl:absolute top-24"
               />
             </div>
           </div>

@@ -16,7 +16,7 @@ type Data = {
 const data: Data = {
   Idea: {
     text: "The idea originated from a group of venture capitalists aiming to consolidate your daily needs into a comprehensive crypto-based platform.",
-    image: "/images/idea_img.svg", // Optional image path
+    image: "/images/idea.svg", // Optional image path
   },
   Finance: {
     text: "Your finance content here...",
@@ -78,7 +78,7 @@ const RoadmapSection = () => {
             </button>
           ))}
         </nav>
-        <div className="p-4 w-3/4">
+        <div className="p-1 md:p-4 w-3/4">
           <p className=" text-xl md:text-4xl mb-12">{data[activeSection].text}</p>
           {data[activeSection].image && (
             <div className="h-full">
@@ -88,6 +88,7 @@ const RoadmapSection = () => {
                 className="mt-4"
                 width={500}
                 height={100}
+                objectFit="contain"
               />
             </div>
           )}
