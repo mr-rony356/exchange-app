@@ -10,11 +10,11 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="bg-transparent backdrop-blur-sm text-white fixed top-0  w-full z-10">
-      <div className=" flex justify-between items-center p-4 container mx-auto md:px-16">
+      <div className=" flex justify-between items-center p-4 container mx-auto ">
         <Link href="/" className=" flex items-center ">
           <Image className="w-36 xl:w-52 " src={logo} alt="logo" />
         </Link>
-        <div className="hidden lg:flex xl:space-x-16 md:space-x-6 text-gray-400 text-sm xl:text-lg ">
+        <div className="hidden lg:flex xl:space-x-12 md:space-x-6 text-gray-400 text-sm xl:text-lg ">
           <Link href="/system">System</Link>
           <Link href="/exchange">Exchange</Link>
           <Link href="/bank">Bank</Link>
