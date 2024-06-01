@@ -19,8 +19,8 @@ export default function Home() {
 
         <div className="  pt-24 px-4 md:px-16 container mx-auto ">
           <div className="text">
-            <p className="mb-6 text-sm">ACONOMY PLATFORM</p>
-            <h1 className="text-3xl md:text-5xl w-full  md:max-w-2xl mb-24  ">
+            <p className="mb-6 text-sm text-orange-500">ACONOMY PLATFORM</p>
+            <h1 className="text-3xl md:text-6xl w-full  md:max-w-3xl mb-24  ">
               Investing on the blockchain is a lucrative way for high returns in
               the current transformation of the financial markets.
             </h1>

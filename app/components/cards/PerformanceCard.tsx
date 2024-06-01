@@ -9,7 +9,7 @@ interface PerformanceCardProps {
 
 const PerformanceCard: React.FC<PerformanceCardProps> = ({ imageUrl, title, subtitle }) => {
   return (
-    <div className="flex items-center  max-w-md p-4 gap-4">
+    <div className="flex items-center  max-w-md p-4 gap-4 ">
       <Image src={imageUrl}  width={50} height={100} alt="Performance" />
       <div>
         <h5 className="text-lg my-2">{title}</h5>
