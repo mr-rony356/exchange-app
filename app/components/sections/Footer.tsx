@@ -8,7 +8,7 @@ import Image from "next/image";
 const Footer: React.FC = () => {
   return (
     <footer className="curve-section text-gray-400 relative">
-      <div className="relative z-10 max-w-7xl mx-auto pt-12 px-4 sm:px-6 lg:pt-16 lg:px-8">
+      <div className="relative z-10 container  mx-auto pt-12 px-4 sm:px-6 lg:pt-16 lg:px-16">
         <div className="flex justify-center text-left px-8 md:px-48">
           <div className="my-4 p-6 rounded-xl border-gray-600 border-2 border-solid">
             <h2 className="text-white text-2xl font-bold">
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
             </Link>
           </div>
         </div>
-        <div className="mt-16 flex flex-col  md:flex-row justify-between ">
+        <div className="mt-16 flex  flex-col  md:flex-row justify-between ">
           <div className="md:w-1/2 mx-auto flex flex-col items-start ">
             <Link href="/" className="text-white text-xl font-bold">
               <Image className="w-32 md:w-52 " src={logo} alt="logo" />

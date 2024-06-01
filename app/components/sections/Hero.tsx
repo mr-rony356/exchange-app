@@ -7,7 +7,7 @@ import Button from "../Button";
 const Hero = () => {
   return (
     <section className="bg-black">
-      <div className="container mx-auto md:px-16 flex flex-col px-4  mt-32 py-8">
+      <div className="flex flex-col mt-32 py-8">
         <div className="text-white text-6xl md:text-9xl font-bold">
           <span className="text-gray-400">T</span>
           <span className="text-gray-400">A</span>

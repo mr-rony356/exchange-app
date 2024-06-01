@@ -3,6 +3,26 @@
 @tailwind utilities;
 
 :root {
+  --reverse-gradient: radial-gradient(
+    circle at bottom left,
+    rgb(101, 49, 49),
+    rgb(0, 0, 0) 60%
+  );
+  --base-gradient: radial-gradient(
+    circle at bottom left,
+    rgb(0, 0, 0) 50%,
+    rgb(23, 23, 23),
+    rgb(101, 39, 39)
+  );
+  --rereverse-gradient: radial-gradient(
+    circle at top left,
+    rgb(0, 0, 0) 50%,
+    rgb(23, 23, 23),
+    rgb(101, 39, 39)
+  );
+}
+
+:root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -14,20 +34,23 @@
   }
 }
 
-*{
-  font-family: 'Manrope';
+* {
+  font-family: "Manrope";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.btn-shadow:hover{
-  box-shadow: 0 0 24px rgba(99,224,120,0.6);
+
+header a {
+  transition: all 0.5s ease-in-out;
 }
-/* Define a base gradient and reverse gradient using CSS variables */
-:root {
-  --reverse-gradient: radial-gradient(circle at bottom left , rgb(101, 49, 49), rgb(0, 0, 0) 60%);
-  --base-gradient: radial-gradient(circle at bottom left, rgb(0, 0, 0) 50% ,rgb(23, 23, 23), rgb(101, 39, 39));
-  --rereverse-gradient: radial-gradient(circle at top left, rgb(0, 0, 0) 50% ,rgb(23, 23, 23), rgb(101, 39, 39));
+header a:hover {
+  transition: all 0.5s ease-in-out;
+  color: white;
+}
+
+.btn-shadow:hover {
+  box-shadow: 0 0 24px rgba(99, 224, 120, 0.6);
 }
 
 /* Apply the base gradient by default */
@@ -35,7 +58,73 @@
   background: var(--base-gradient);
 }
 .subs-grad-section {
-  background: radial-gradient(circle at bottom center , rgb(104, 45, 45), rgb(22, 22, 22) 60%);
+  background: radial-gradient(
+    circle at bottom center,
+    rgb(104, 45, 45),
+    rgb(22, 22, 22) 60%
+  );
+}
+.circle {
+  position: absolute;
+  top: 0;
+  right: -150px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Use radial-gradient with the desired position */
+  background: radial-gradient(
+    circle at center right,
+    rgba(113, 51, 51, 0.825),
+    #2c39684f,
+    rgb(0, 0, 0) 40%
+  );
+}
+.left-circle {
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Use radial-gradient with the desired position */
+  background: radial-gradient(
+    circle at center left,
+    rgba(113, 51, 51, 0.825),
+    #404c794f,
+    rgb(0, 0, 0) 40%
+  );
+}
+/* styles/accordion.css */
+.transition-max-height {
+  transition: max-height 1s ease-in-out;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.rotate-0 {
+  transform: rotate(0deg);
+}
+
+.transition-transform {
+  transition: transform 1s ease-in-out;
+}
+
+.center-circle {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Use radial-gradient with the desired position */
+  background: radial-gradient(
+    circle at center,
+    rgba(85, 38, 38, 0.825),
+    #55555639 40%,
+    transparent 100%
+  );
 }
 
 /* Use the nth-child selector to apply the reverse gradient to every even card */
@@ -51,8 +140,20 @@ input[type="checkbox"] {
   color: red;
 }
 .radial-grad {
-  background: radial-gradient(circle at center right, rgba(86, 5, 5, 0.825)  , rgb(0, 0, 0) 40% 60%);
+  background: radial-gradient(
+    circle at center right,
+    rgba(86, 5, 5, 0.825),
+    rgb(0, 0, 0) 40% 60%
+  );
 }
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid rgb(255, 102, 0);
+}
+
 .curve-section {
   background: linear-gradient(to bottom, rgb(0, 0, 0), black);
   clip-path: ellipse(100% 100% at 50% 100%);
@@ -60,17 +161,45 @@ input[type="checkbox"] {
   padding: 50px 0;
   margin-top: -100px;
 }
-@media (max-width:760) {
-  .radial-grad{
-    background: radial-gradient(circle at center right, rgba(79, 4, 4, 0.952)  , rgb(0, 0, 0) 60% 90%);
+
+@media (max-width: 760) {
+  .radial-grad {
+    background: radial-gradient(
+      circle at center right,
+      rgba(79, 4, 4, 0.952),
+      rgb(0, 0, 0) 60% 90%
+    );
   }
   .curve-section {
     background: linear-gradient(to bottom, rgb(0, 0, 0), black);
-    clip-path: ellipse(170% 100% at 50% 100%);
+    clip-path: ellipse(200% 100% at 50% 100%);
     text-align: center;
     padding: 50px 0;
     margin-top: -100px;
   }
-  
-  
+
+  .circle {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Use radial-gradient with the desired position */
+    background: radial-gradient(
+      circle at center right,
+      rgba(113, 51, 51, 0.825),
+      #2c39684f,
+      rgb(0, 0, 0) 40%
+    );
+  }
+}
+@media (min-width: 1500px) {
+  .circle {
+    right: -300px;
+  }
+
+  .left-circle {
+    left: -300px;
+  }
 }

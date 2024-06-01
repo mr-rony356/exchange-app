@@ -1,22 +1,29 @@
-import Image from 'next/image';
-import React from 'react';
+// components/Card.tsx
+import Image from "next/image";
+import React from "react";
 
-interface PerformanceCardProps {
-  imageUrl: string;
-  title: string;
+interface CardProps {
   subtitle: string;
+  imageUrl: string;
 }
 
-const PerformanceCard: React.FC<PerformanceCardProps> = ({ imageUrl, title, subtitle }) => {
+const ImageCard: React.FC<CardProps> = ({ subtitle, imageUrl }) => {
   return (
-    <div className="flex items-center  max-w-md p-4 gap-4 ">
-      <Image src={imageUrl}  width={50} height={100} alt="Performance" />
-      <div>
-        <h5 className="text-lg my-2">{title}</h5>
-        <p className="text-sm text-gray-600">{subtitle}</p>
+    <div className="max-w-xs rounded-lg overflow-hidden shadow-lg bg-gray-900 text-white flex flex-col justify-start min-h-60">
+      <div className="px-6 pt-2">
+        <Image
+          src={imageUrl}
+          width={50}
+          height={40}
+          alt="Sunset in the mountains"
+        />
+      </div>
+
+      <div className="px-6 py-4">
+        <p className="text-gray-500 text-sm">{subtitle}</p>
       </div>
     </div>
   );
 };
 
-export default PerformanceCard;
+export default ImageCard;

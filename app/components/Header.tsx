@@ -9,8 +9,8 @@ import { FaArrowRight } from "react-icons/fa6";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="bg-transparent backdrop-blur-sm text-white fixed top-0 w-full z-10">
-      <div className="mx-0 md:mx-4 flex justify-between items-center p-4">
+    <header className="bg-transparent backdrop-blur-sm text-white fixed top-0  w-full z-10">
+      <div className=" flex justify-between items-center p-4 container mx-auto md:px-16">
         <Link href="/" className=" flex items-center ">
           <Image className="w-36 xl:w-52 " src={logo} alt="logo" />
         </Link>
@@ -57,7 +57,7 @@ const Header = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="lg:hidden transition-all duration-300 justify-center items-center flex flex-col py-8 text-lg">
+        <div className="lg:hidden transition-all duration-300 justify-center items-center flex bg-gray-900  flex-col py-8 text-lg">
           <Link href="/system" className="block px-4 py-2">
             System
           </Link>

@@ -8,7 +8,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ text, type }) => {
-  const baseStyles = "px-4 md:px-6 py-2 rounded-full font-bold transition-all duration-300 text-sm  md:text-base";
+  const baseStyles = "px-4 md:px-8 py-3 rounded-full  transition-all duration-300 text-sm  md:text-base";
   const applyStyles =
     "bg-orange-600 text-white btn-shadow";
 const discoverStyles =
