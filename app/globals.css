@@ -16,10 +16,61 @@
 
 *{
   font-family: 'Manrope';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .btn-shadow:hover{
   box-shadow: 0 0 24px rgba(99,224,120,0.6);
 }
-section{
-  padding-bottom: 68px !important;
+/* Define a base gradient and reverse gradient using CSS variables */
+:root {
+  --reverse-gradient: radial-gradient(circle at bottom left , rgb(101, 49, 49), rgb(0, 0, 0) 60%);
+  --base-gradient: radial-gradient(circle at bottom left, rgb(0, 0, 0) 50% ,rgb(23, 23, 23), rgb(101, 39, 39));
+  --rereverse-gradient: radial-gradient(circle at top left, rgb(0, 0, 0) 50% ,rgb(23, 23, 23), rgb(101, 39, 39));
+}
+
+/* Apply the base gradient by default */
+.subs-grad {
+  background: var(--base-gradient);
+}
+.subs-grad-section {
+  background: radial-gradient(circle at bottom center , rgb(104, 45, 45), rgb(22, 22, 22) 60%);
+}
+
+/* Use the nth-child selector to apply the reverse gradient to every even card */
+.subs-grad:nth-child(2) {
+  background: var(--reverse-gradient);
+}
+.subs-grad:nth-child(3) {
+  background: var(--rereverse-gradient);
+}
+input[type="checkbox"] {
+  -webkit-tap-highlight-color: #0a0a0a;
+  background-color: red;
+  color: red;
+}
+.radial-grad {
+  background: radial-gradient(circle at center right, rgba(86, 5, 5, 0.825)  , rgb(0, 0, 0) 40% 60%);
+}
+.curve-section {
+  background: linear-gradient(to bottom, rgb(0, 0, 0), black);
+  clip-path: ellipse(100% 100% at 50% 100%);
+  text-align: center;
+  padding: 50px 0;
+  margin-top: -100px;
+}
+@media (max-width:760) {
+  .radial-grad{
+    background: radial-gradient(circle at center right, rgba(79, 4, 4, 0.952)  , rgb(0, 0, 0) 60% 90%);
+  }
+  .curve-section {
+    background: linear-gradient(to bottom, rgb(0, 0, 0), black);
+    clip-path: ellipse(170% 100% at 50% 100%);
+    text-align: center;
+    padding: 50px 0;
+    margin-top: -100px;
+  }
+  
+  
 }

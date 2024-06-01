@@ -11,10 +11,10 @@ const Header = () => {
   return (
     <header className="bg-transparent backdrop-blur-sm text-white fixed top-0 w-full z-10">
       <div className="mx-0 md:mx-4 flex justify-between items-center p-4">
-        <Link href="/" className="text-xl font-bold flex items-center ">
-          <Image className="w-36 md:w-52 " src={logo} alt="logo" />
+        <Link href="/" className=" flex items-center ">
+          <Image className="w-36 xl:w-52 " src={logo} alt="logo" />
         </Link>
-        <div className="hidden md:flex space-x-16 text-gray-400 ">
+        <div className="hidden lg:flex xl:space-x-16 md:space-x-6 text-gray-400 text-sm xl:text-lg ">
           <Link href="/system">System</Link>
           <Link href="/exchange">Exchange</Link>
           <Link href="/bank">Bank</Link>
@@ -23,16 +23,16 @@ const Header = () => {
           <Link href="/resources">Resources</Link>
           <Link href="/contact">Contact</Link>
         </div>
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center lg:space-x-8">
           <Link href="/login" className="flex items-center gap-2">
-            <span className="login-text">LOG IN</span>
+            <span className="login-text text-sm">LOG IN</span>
             <span className="login-icon">
               <FaArrowRight />
             </span>
           </Link>
           <Button text="APPLY NOW" type="apply" />
         </div>
-        <div className="md:hidden flex items-center gap-3">
+        <div className="lg:hidden flex items-center gap-3">
           <Button text="APPLY NOW" type="apply" />
           <button onClick={() => setIsOpen(!isOpen)}>
             <svg
@@ -57,7 +57,7 @@ const Header = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden transition-all duration-300 justify-center items-center flex flex-col py-8 text-2xl">
+        <div className="lg:hidden transition-all duration-300 justify-center items-center flex flex-col py-8 text-lg">
           <Link href="/system" className="block px-4 py-2">
             System
           </Link>

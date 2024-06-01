@@ -8,16 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
-      fontFamily: {
-        sans: ["var(--font-geist-sans)"],
-        mono: ["var(--font-geist-mono)"],
-      },
+      gradientColorStops: theme => ({
+        'black': '#000',
+        'transparent': 'transparent',
+      }),
     },
   },
+  variants: {
+    extend: {},
+  },
   plugins: [],
-};
-export default config;
+}
+  export default config;

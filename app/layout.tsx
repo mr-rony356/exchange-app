@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
+import Footer from "./components/sections/Footer";
 
 // Import Roboto font
 const manrope = Manrope({
@@ -21,9 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} `}>
+      <body className={`${manrope.variable} bg-black text-white`}>
         <Header />
         {children}
+        <Footer/>
       </body>
     </html>
   );

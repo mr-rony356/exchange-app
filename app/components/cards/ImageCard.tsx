@@ -10,12 +10,12 @@ interface CardProps {
 
 const ImageCard: React.FC<CardProps> = ({ title, subtitle, imageUrl }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-black">
+    <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-gray text-white">
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{title}</div>
-        <p className="text-gray-700 text-base">{subtitle}</p>
+        <div className="text-base mb-2">{title}</div>
+        <p className="text-gray-500 text-sm">{subtitle}</p>
       </div>
-      <Image className="w-full" src={imageUrl} width={200} height={100} alt="Sunset in the mountains" />
+      <Image className="w-full" src={imageUrl} width={100} height={100} alt="Sunset in the mountains" />
 
     </div>
   );

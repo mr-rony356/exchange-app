@@ -2,15 +2,15 @@
 import React from 'react';
 
 interface PercentageCardProps {
-  percentage: number;
+  value: string;
   subtitle: string;
 }
 
-const PercentageCard: React.FC<PercentageCardProps> = ({ percentage, subtitle }) => {
+const PercentageCard: React.FC<PercentageCardProps> = ({ value, subtitle }) => {
   return (
-    <div className="flex flex-col items-center justify-center bg-white rounded-lg border shadow-md max-w-xs p-4">
-      <span className="text-3xl font-bold text-blue-600">{percentage}%</span>
-      <span className="text-gray-600">{subtitle}</span>
+    <div className="flex flex-col  justify-start  max-w-xs p-4">
+      <span className="text-5xl  text-gray-600">{value}%</span>
+      <span className="text-gray-800 my-2  text-sm">{subtitle}</span>
     </div>
   );
 };
