@@ -9,7 +9,7 @@ interface CardProps {
 
 const ImageCard: React.FC<CardProps> = ({ subtitle, imageUrl }) => {
   return (
-    <div className="max-w-xs rounded-lg overflow-hidden shadow-lg bg-gray-900 text-white flex flex-col justify-start min-h-60">
+    <div className="max-w-xs rounded-lg overflow-hidden shadow-lg bg-[#ffffff11] text-white flex flex-col justify-start min-h-60">
       <div className="px-6 pt-2">
         <Image
           src={imageUrl}

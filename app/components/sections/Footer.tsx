@@ -1,16 +1,42 @@
 // components/Footer.tsx
+"use client";
 import Link from "next/link";
 import React from "react";
 import logo from "../../../public/images/logo.png";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import {
+  fadeInSection,
+  staggerContainer,
+  fadeInLeft,
+  fadeInRight,
+  fadeInUp,
+} from "../../utils/animation";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="curve-section text-gray-400 relative">
-      <div className="relative z-10 container  mx-auto pt-12 px-4 sm:px-6 lg:pt-16 lg:px-16">
-        <div className="flex justify-center text-left px-8 md:px-48">
-          <div className="my-4 p-6 rounded-xl border-gray-600 border-2 border-solid">
+    <motion.footer
+      className="curve-section text-gray-400 relative"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeInUp}
+    >
+      <div className="relative z-10 container mx-auto pt-12 px-4 sm:px-6 lg:pt-16 lg:px-16">
+        <motion.div
+          className="flex justify-center text-left px-8 md:px-48"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+            >
+          <motion.div
+            className="my-4 p-6 rounded-xl border-gray-600 border-2 border-solid"
+            variants={fadeInLeft}
+            initial="hidden"
+            whileInView="visible"
+          >
             <h2 className="text-white text-2xl font-bold">
               Explore Value. Explore Aconomy.
             </h2>
@@ -29,10 +55,21 @@ const Footer: React.FC = () => {
                 <FaArrowRight />
               </span>
             </Link>
-          </div>
-        </div>
-        <div className="mt-16 flex  flex-col  md:flex-row justify-between ">
-          <div className="md:w-1/2 mx-auto flex flex-col items-start ">
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className="mt-16 flex flex-col md:flex-row justify-between"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+            >
+          <motion.div
+            className="md:w-1/2 mx-auto flex flex-col items-start"
+            variants={fadeInLeft}
+            initial="hidden"
+            whileInView="visible"
+          >
             <Link href="/" className="text-white text-xl font-bold">
               <Image className="w-32 md:w-52 " src={logo} alt="logo" />
             </Link>
@@ -45,8 +82,14 @@ const Footer: React.FC = () => {
               <br />
               United Kingdom
             </p>
-          </div>
-          <div className="md:w-1/2 flex flex-col   md:flex-row md:space-x-8 mt-8 md:mt-0 text-gray-500 ">
+          </motion.div>
+          <motion.div
+            className="md:w-1/2 flex flex-col md:flex-row md:space-x-8 mt-8 md:mt-0 text-gray-500"
+            variants={fadeInRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+                >
             <div className="md:w-1/3">
               <h3 className="text-xl">INFORMATION</h3>
               <ul className="mt-4 space-y-2">
@@ -127,14 +170,30 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>{" "}
-        <div className="mt-12 border-t border-gray-800 pt-8 flex flex-col-reverse sm:flex-row justify-between items-center gap-6">
-          <p className="text-gray-600 text-sm text-center">
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className="mt-12 border-t border-gray-800 pt-8 flex flex-col-reverse sm:flex-row justify-between items-center gap-6"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+            >
+          <motion.p
+            className="text-gray-600 text-sm text-center"
+            variants={fadeInLeft}
+            initial="hidden"
+            whileInView="visible"
+          >
             &copy; 2024, Aconomy. All trademarks and copyrights belong to their
             respective owners.
-          </p>
-          <div className="mt-4 sm:mt-0 flex space-x-4 text-xs md:text-sm  text-gray-600">
+          </motion.p>
+          <motion.div
+            className="mt-4 sm:mt-0 flex space-x-4 text-xs md:text-sm  text-gray-600"
+            variants={fadeInRight}
+            initial="hidden"
+            whileInView="visible"
+          >
             <Link href="#" className="hover:text-white">
               Terms and Conditions
             </Link>
@@ -147,12 +206,13 @@ const Footer: React.FC = () => {
             <Link href="#" className="hover:text-white">
               Private Investments
             </Link>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </footer>
-
+    </motion.footer>
   );
 };
 
 export default Footer;
+
+

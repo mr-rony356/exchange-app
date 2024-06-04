@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
 import "./globals.css";
+import { Manrope } from '@next/font/google';
 import Header from "./components/Header";
 import Footer from "./components/sections/Footer";
 
@@ -8,8 +8,9 @@ import Footer from "./components/sections/Footer";
 const manrope = Manrope({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
-  variable: "--font-roboto",
+  variable: "--font-manrope",
 });
+
 export const metadata: Metadata = {
   title: "ACCONOMY- Discover Value",
   description: "DISCOVER VALUE",
@@ -25,7 +26,7 @@ export default function RootLayout({
       <body className={`${manrope.variable} bg-black text-white`}>
         <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

@@ -33,13 +33,35 @@
     --foreground: #ededed;
   }
 }
-
+@keyframes move-dot {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100%, 0);
+  }
+  50% {
+    transform: translate(100%, 100%);
+  }
+  75% {
+    transform: translate(0, 100%);
+  }
+}
+/* In your global CSS file or a component-specific CSS */
+html {
+  scroll-behavior: smooth;
+}
+.dot {
+  animation: move-dot 4s infinite linear;
+}
 * {
-  font-family: "Manrope";
+  font-family: var(--font-manrope), sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 
 header a {
   transition: all 0.5s ease-in-out;
@@ -113,7 +135,7 @@ header a:hover {
 
 .center-circle {
   position: absolute;
-  top: 80px;
+  top: 100px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -121,9 +143,8 @@ header a:hover {
   /* Use radial-gradient with the desired position */
   background: radial-gradient(
     circle at center,
-    rgba(85, 38, 38, 0.825),
-    #55555639 40%,
-    transparent 100%
+    rgba(110, 41, 41, 0.849),
+    transparent 40% 60%
   );
 }
 
@@ -182,12 +203,23 @@ input[type="checkbox"] {
     right: 0px !important;
   }
 }
-@media (min-width: 1500px) {
-  .circle {
-    right: -300px;
-  }
 
-  .left-circle {
-    left: -300px;
+@media (max-width:1024px) {
+  .circle {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Use radial-gradient with the desired position */
+    background: radial-gradient(
+      circle at center right,
+      rgba(113, 51, 51, 0.825),
+      #2c39684f,
+      rgb(0, 0, 0) 40%
+    );
   }
+  
+  
 }

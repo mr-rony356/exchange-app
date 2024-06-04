@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer, zoomIn } from "./utils/animation";
 import Image from "next/image";
 import ImageCard from "./components/cards/ImageCard";
 import Hero from "./components/sections/Hero";
@@ -19,37 +22,71 @@ export default function Home() {
       <Hero />
       <LogosGrid />
 
-      <div className=" py-24">
-        <div className="text">
-          <p className="mb-6 text-sm text-orange-500">ACONOMY PLATFORM</p>
-          <h1 className="text-3xl md:text-6xl w-full  md:max-w-3xl mb-24  ">
+      <motion.div
+        className="py-24"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
+        <motion.div
+          className="text"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.p
+            className="mb-6 text-sm text-orange-500"
+            variants={fadeInUp}
+          >
+            ACONOMY PLATFORM
+          </motion.p>
+          <motion.h1
+            className="text-3xl md:text-6xl w-full md:max-w-3xl mb-24"
+            variants={fadeInUp}
+          >
             Investing on the blockchain is a lucrative way for high returns in
             the current transformation of the financial markets.
-          </h1>
-        </div>
-        <div className="card grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4   gap-16 md:gap-8 place-items-center">
-          <ImageCard
-            title="Simple Asset Allocation"
-            subtitle="Easily allocate your investments across your chosen assets with just a few simple clicks."
-            imageUrl="/images/firstcard.svg"
-          />
-          <ImageCard
-            title="Simple Asset Allocation"
-            subtitle="Easily allocate your investments across your chosen assets with just a few simple clicks."
-            imageUrl="/images/firstcard.svg"
-          />
-          <ImageCard
-            title="Simple Asset Allocation"
-            subtitle="Easily allocate your investments across your chosen assets with just a few simple clicks."
-            imageUrl="/images/firstcard.svg"
-          />
-          <ImageCard
-            title="Simple Asset Allocation"
-            subtitle="Easily allocate your investments across your chosen assets with just a few simple clicks."
-            imageUrl="/images/firstcard.svg"
-          />
-        </div>
-      </div>
+          </motion.h1>
+        </motion.div>
+        <motion.div
+          className="card grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 md:gap-8 place-items-center"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.div variants={zoomIn}>
+            <ImageCard
+              title="Simple Asset Allocation"
+              subtitle="Easily allocate your investments across your chosen assets with just a few simple clicks."
+              imageUrl="/images/firstcard.svg"
+            />
+          </motion.div>
+          <motion.div variants={zoomIn}>
+            <ImageCard
+              title="Simple Asset Allocation"
+              subtitle="Easily allocate your investments across your chosen assets with just a few simple clicks."
+              imageUrl="/images/firstcard.svg"
+            />
+          </motion.div>
+          <motion.div variants={zoomIn}>
+            <ImageCard
+              title="Simple Asset Allocation"
+              subtitle="Easily allocate your investments across your chosen assets with just a few simple clicks."
+              imageUrl="/images/firstcard.svg"
+            />
+          </motion.div>
+          <motion.div variants={zoomIn}>
+            <ImageCard
+              title="Simple Asset Allocation"
+              subtitle="Easily allocate your investments across your chosen assets with just a few simple clicks."
+              imageUrl="/images/firstcard.svg"
+            />
+          </motion.div>
+        </motion.div>
+      </motion.div>
 
       <section className="relative">
         <div className="circle"></div>
@@ -78,7 +115,7 @@ export default function Home() {
               <p className="text-orange-500 uppercase">native cryptocurrency</p>
               <HeaderText text="The Aconomy Platform is the driving force behind your access to the world of Earnings." />
               <div className="flex flex-col gap-12 -mt-6">
-              <p className="text-gray-400 ">
+                <p className="text-gray-400 ">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Nostrum quis maxime neque hic. Atque repellat explicabo
                   aliquid eligendi voluptas! Autem.{" "}
@@ -156,15 +193,27 @@ export default function Home() {
         </div>
       </section>
       <RoadmapSection />
-      <section className="mt-6 lg:mt-48">
+      <section className="mt-6 md:mt-10">
         <div className="w-full text-center flex justify-center">
-          <Image src={Market} alt="image" objectFit="cover" />
+          <Image src={Market} alt="image"  objectFit="cover"/>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-10 place-items-center my-10">
-        <PerformanceCard subtitle="With exclusive access to world-leading brands such as Apple, Amazon, Uber, Spotify, and more." imageUrl="/images/circular.svg" />
-        <PerformanceCard subtitle="With exclusive access to world-leading brands such as Apple, Amazon, Uber, Spotify, and more." imageUrl="/images/circular.svg" />
-        <PerformanceCard subtitle="With exclusive access to world-leading brands such as Apple, Amazon, Uber, Spotify, and more." imageUrl="/images/circular.svg" />
-        <PerformanceCard subtitle="With exclusive access to world-leading brands such as Apple, Amazon, Uber, Spotify, and more." imageUrl="/images/circular.svg" />
+          <PerformanceCard
+            subtitle="With exclusive access to world-leading brands such as Apple, Amazon, Uber, Spotify, and more."
+            imageUrl="/images/circular.svg"
+          />
+          <PerformanceCard
+            subtitle="With exclusive access to world-leading brands such as Apple, Amazon, Uber, Spotify, and more."
+            imageUrl="/images/circular.svg"
+          />
+          <PerformanceCard
+            subtitle="With exclusive access to world-leading brands such as Apple, Amazon, Uber, Spotify, and more."
+            imageUrl="/images/circular.svg"
+          />
+          <PerformanceCard
+            subtitle="With exclusive access to world-leading brands such as Apple, Amazon, Uber, Spotify, and more."
+            imageUrl="/images/circular.svg"
+          />
         </div>
       </section>
 
