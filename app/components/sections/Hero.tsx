@@ -93,7 +93,7 @@ const Hero = () => {
               variants={childVariants}
               className="text-xl text-gray-400"
             >
-              In a world where data is currency, it's time to reclaim what&apos;s
+              In a world where data is currency, it&apos;s time to reclaim what&apos;s
               rightfully yours. Your digital identity, your personal
               information, your financial freedom—all in your hands.
             </motion.p>
